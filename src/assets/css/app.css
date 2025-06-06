@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "./tailwind-config.css";
+
+@layer base {
+    @import "./base.css";
+}
+
+@layer components {
+    @import "./components.css";
+}
+
+@import "./pages.css";
+@import "./fontawesome-all.css";
+
