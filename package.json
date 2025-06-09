@@ -1,21 +1,33 @@
 {
   "name": "lineone-ui-component",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.1.1",
   "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "types/index.d.ts",
+  "style": "dist/index.css",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "pack": "npm pack"
   },
-  "dependencies": {
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
+  "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.8"
+  },
+  "dependencies": {
+    "@types/node": "^22.15.30",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
@@ -40,10 +52,10 @@
     "playwright": "^1.52.0",
     "postcss": "^8.5.4",
     "storybook": "^9.0.5",
-    "tailwindcss": "^4.1.8",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.2"
   }
 }
